@@ -1,0 +1,51 @@
+<odoo>
+  <data>
+    
+
+    <record id="bibliotca_estante_view_form" model="ir.ui.view">
+        <field name="name">bibliotca.estante.view.form</field>
+        <field name="model">bibliotca.estante</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                    <group>
+                        <field name="libros_ids" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    
+    
+    <record id="action_biblioteca" model="ir.actions.act_window">
+        <field name="name">Biblioteca</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">bibliotca.estante</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Crea un nuevo Estante para el registro de tu biblioteca
+            </p>
+        </field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Biblioteca" id="Biblioteca_principal" />
+    <menuitem name="Biblioteca" id="Biblioteca_principal_edit" parent="Biblioteca_principal"/>
+    
+    <!--Prestamo-->
+    <menuitem name="Biblioteca" id="Biblioteca_item_menu" parent="Biblioteca_principal" sequence="10" action = "action_biblioteca"/>
+
+
+
+
+    
+    
+    
+  
+  </data>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+bibliotca_estante,record_bibliotca_estante,model_bibliotca_estante,,1,1,1,1
+bibliotca_libros,record_bibliotca_libros,model_bibliotca_libros,,1,1,1,1
